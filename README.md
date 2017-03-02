@@ -1,4 +1,4 @@
-# AdvancedAnalyticsWorkshop
+# Advanced Analytics Workshop
 Content shared during BlueGranite's Advanced Analytics Workshop highlight Microsoft R Server and Azure Data Platform
 
 Links (Placeholder)
@@ -32,6 +32,16 @@ Blog <https://www.blue-granite.com/blog>
 Fuzzy Clustering blog <https://www.blue-granite.com/blog/supply-chain-insights-with-advanced-analytics-fuzzy-clustering>  
 Microsoft R Tutorials <https://www.blue-granite.com/microsoft-r>  
 Webinars <https://www.blue-granite.com/webinar>  
+
+###Association Rules  ('arules' package)
+<http://blog.revolutionanalytics.com/2015/04/association-rules-and-market-basket-analysis-with-r.html>  
+<http://www.rdatamining.com/examples/association-rules>  
+
+###Confidence Intervals
+<http://www.r-tutor.com/elementary-statistics/simple-linear-regression/confidence-interval-linear-regression>  
+<https://www.r-bloggers.com/interval-estimation-of-the-population-mean/>  
+
+
 
 
 
