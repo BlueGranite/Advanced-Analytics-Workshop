@@ -61,6 +61,9 @@ Predicting Length of Stay in Hospitals
 Healthcare Industry page  
 <https://gallery.cortanaintelligence.com/industries/healthcare>
 
+Cortana Intelligence Hands-on Labs
+<https://www.blue-granite.com/resources/topic/labs>
+
 ###R Packages
 Package: 'outliers'
 <https://cran.r-project.org/web/packages/outliers/outliers.pdf>
