@@ -38,7 +38,7 @@ Have questions or want us to set this up for your organization? Please [Contact 
 # Advanced Analytics Workshop
 Content shared during BlueGranite's Advanced Analytics Workshop highlight Microsoft R Server and Azure Data Platform
 
-Links (Placeholder)
+Links
 
 ###Microsoft R  
 <https://msdn.microsoft.com/en-us/microsoft-r/>
