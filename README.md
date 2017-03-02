@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <head>
 <h1 align="center">
   <a href = "http://www.blue-granite.com"><img src="https://www.blue-granite.com/hs-fs/hub/257922/file-2333776730-png/IMG_2015/Blue-Granite-Logo.png?t=1487021913995&width=758&name=Blue-Granite-Logo.png" alt="BlueGranite"></a>
@@ -36,8 +35,6 @@ Have questions or want us to set this up for your organization? Please [Contact 
 
 -----------------------------------------------------------------------------
 
-=======
->>>>>>> abb70db529af1e1d97f72b072492186691a2a12d
 # Advanced Analytics Workshop
 Content shared during BlueGranite's Advanced Analytics Workshop highlight Microsoft R Server and Azure Data Platform
 
@@ -80,16 +77,4 @@ Webinars <https://www.blue-granite.com/webinar>
 ###Confidence Intervals
 <http://www.r-tutor.com/elementary-statistics/simple-linear-regression/confidence-interval-linear-regression>  
 <https://www.r-bloggers.com/interval-estimation-of-the-population-mean/>  
-<<<<<<< HEAD
-=======
 
-
-
-
-
-
-
-
-
-
->>>>>>> abb70db529af1e1d97f72b072492186691a2a12d
