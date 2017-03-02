@@ -18,7 +18,7 @@ Content
 
 [Team Data Science](/teamdatascience/) - Description of the Team Data Science process suggested by Microsoft and tips for implementing in your own organization
 
-[Other Useful Information](/other_useful_info) - Inforation useful for teams getting stared with Analytics and implementing Modern Data Platform solutions
+[Other Useful Information](/other_useful_info) - Information useful for teams getting stared with Analytics and implementing Modern Data Platform solutions
 
 -----------------------------------------------------------------------------
 
