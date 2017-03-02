@@ -69,7 +69,7 @@ Package: 'pacman'
 <https://cran.r-project.org/web/packages/pacman/vignettes/Introduction_to_pacman.html>
 
 ###PMML  
-<https://cran.r-project.org/web/packages/pmml/index.html>  
+<https://cran.r-project.org/web/packages/pmml/index.html>
 <http://dmg.org/pmml/v4-3/GeneralStructure.html>  
 
 ###Tidyverse  
@@ -90,4 +90,7 @@ Webinars <https://www.blue-granite.com/webinar>
 ###Confidence Intervals
 <http://www.r-tutor.com/elementary-statistics/simple-linear-regression/confidence-interval-linear-regression>  
 <https://www.r-bloggers.com/interval-estimation-of-the-population-mean/>  
+
+###outliers
+Outlier detection <http://www.rdatamining.com/examples/outlier-detection> 
 
