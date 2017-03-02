@@ -41,10 +41,16 @@ Content shared during BlueGranite's Advanced Analytics Workshop highlight Micros
 Links (Placeholder)
 
 ###Microsoft R  
-<https://msdn.microsoft.com/en-us/microsoft-r/>  
+<https://msdn.microsoft.com/en-us/microsoft-r/>
+
+Comparison of Base R and ScaleR Functions
+<https://msdn.microsoft.com/en-us/microsoft-r/microsoftml-algorithm-cheat-sheet>
 
 Get Started with R Client  
 <https://msdn.microsoft.com/en-us/microsoft-r/r-client-get-started>  
+
+Microsoft ML Cheat sheet
+<https://msdn.microsoft.com/en-us/microsoft-r/microsoftml-algorithm-cheat-sheet>
 
 ###Cortana Intelligence Gallery  
 <https://gallery.cortanaintelligence.com/>  
@@ -54,6 +60,13 @@ Predicting Length of Stay in Hospitals
 
 Healthcare Industry page  
 <https://gallery.cortanaintelligence.com/industries/healthcare>
+
+###R Packages
+Package: 'outliers'
+<https://cran.r-project.org/web/packages/outliers/outliers.pdf>
+
+Package: 'pacman'
+<https://cran.r-project.org/web/packages/pacman/vignettes/Introduction_to_pacman.html>
 
 ###PMML  
 <https://cran.r-project.org/web/packages/pmml/index.html>  
