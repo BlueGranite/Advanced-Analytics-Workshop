@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="WWIDW">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=bgsql01.eastus.cloudapp.azure.com;Initial Catalog=WideWorldImportersDW</ConnectString>
+      </ConnectionProperties>
+      <rd:SecurityType>DataBase</rd:SecurityType>
+      <rd:DataSourceID>008a6581-0289-4991-a068-eceb434d87e3</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="HistPlot">
+      <Query>
+        <DataSourceName>WWIDW</DataSourceName>
+        <CommandText>  DECLARE @query nvarchar(max) =  
+  N'SELECT CASE WHEN [Order Date Key] = [Picked Date Key] THEN 1 ELSE 0 END AS SameDayFullfillment
+    FROM [Fact].[Order]'  
+  EXECUTE sp_execute_external_script @language = N'R',  
+                                     @script = N'  
+   #df &lt;- InputDataSet;
+   image_file = tempfile();  
+   jpeg(filename = image_file, width=750, height=750);  
+   #Plot histogram  
+   rxHistogram(~SameDayFullfillment, data=InputDataSet, col=''lightgreen'', title = ''Fullfillment Histogram'', xlab =''Fullfilled Same Day or not'', ylab =''Counts'');  
+   #hist(df$SameDayFullfillment)
+   dev.off();  
+   OutputDataSet &lt;- data.frame(data=readBin(file(image_file, "rb"), what=raw(), n=1e6));  
+   ',  
+   @input_data_1 = @query  
+   WITH RESULT SETS ((plot varbinary(max))); </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="plot">
+          <DataField>plot</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Image Name="Image1">
+            <Source>Database</Source>
+            <Value>=First(Fields!plot.Value, "HistPlot")</Value>
+            <MIMEType>image/jpeg</MIMEType>
+            <Top>0.23833in</Top>
+            <Left>0.20361in</Left>
+            <Height>750pc</Height>
+            <Width>750pc</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+        </ReportItems>
+        <Height>125.23833in</Height>
+        <Style />
+      </Body>
+      <Width>125.20361in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>11f335fe-6eeb-45af-b6be-4f433beecea6</rd:ReportID>
+</Report>
