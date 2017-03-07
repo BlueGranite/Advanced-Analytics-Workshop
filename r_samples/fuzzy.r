@@ -220,12 +220,20 @@ p3
 
 # Interactive plot using plotly 
 # https://plot.ly/r/text-and-annotations/
-p10 <- dSCM %>% 
-  plot_ly(x = PC1, y = PC2, mode = "markers", color = finalClus, size = probFuzzy, 
+dSCM %>% 
+  plot_ly(x = ~PC1, 
+          y = ~PC2, 
+          mode = "markers", 
+          color = ~finalClus, 
+          size = ~probFuzzy, 
           hoverinfo = "text",
-          text = paste("ID = ", dSCM$ID, "Fuzzy Cluster Prob = ", dSCM$probFuzzy)) %>% 
+          type = "scatter",
+          text = paste("ID = ", 
+                       dSCM$ID, 
+                       "Fuzzy Cluster Prob = ", 
+                       dSCM$probFuzzy)) %>% 
   layout(title ="K-means with fuzzy cluster")
-p10
+
 
 # summary table to inspect fuzzy cluster probability
 dSCM.fuz <- dSCM[fuzRows, c("ID", 
@@ -234,6 +242,7 @@ dSCM.fuz <- dSCM[fuzRows, c("ID",
                             "mem_Clus.3", 
                             "probFuzzy")]
 
+head(dSCM.fuz)
 # end
 
 ###########################################################
