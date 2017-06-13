@@ -15,8 +15,8 @@
     - If time permits: Diagnostics and troubleshooting <http://bit.ly/2s2gNsS>
     
   + Data Scientist pre-requisites for web services <http://bit.ly/2s23Q26>
-  + Deploy R model as web service <http://bit.ly/2s2g76x>
   + Logging into R Server with mrsdeploy <http://bit.ly/2s2mKpC>
+  + Deploy R model as web service <http://bit.ly/2s2g76x>
   + Manage web services in R <http://bit.ly/2s2mF5r>
   + Service consumption <http://bit.ly/2s2fg65>
   
@@ -32,7 +32,9 @@
 
 * Workflow examples <https://msdn.microsoft.com/en-us/microsoft-r/operationalize/data-scientist-manage-services#workflow>
 
+* Package management with mrsdeploy <https://msdn.microsoft.com/en-us/microsoft-r/operationalize/package-management>
 
+* What's new in Microsoft R Server <https://msdn.microsoft.com/en-us/microsoft-r/rserver-whats-new>
 
 
 ***
