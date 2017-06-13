@@ -3,7 +3,7 @@
   <a href = "http://www.blue-granite.com"><img src="https://www.blue-granite.com/hs-fs/hub/257922/file-2333776730-png/IMG_2015/Blue-Granite-Logo.png?t=1487021913995&width=758&name=Blue-Granite-Logo.png" alt="BlueGranite"></a>
 </h1>
 <h1 align="center">Advanced Analytics Workshop</h1>
-<h2 align="center">Microsoft R server Web Services</h2>
+<h2 align="center">Microsoft R Server Web Services</h2>
 </head>
 
 ## R Server Web Services Agenda
