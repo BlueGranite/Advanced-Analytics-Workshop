@@ -47,6 +47,8 @@
 
 * How to schedule web service execution
 * How to consume web service with GET call without downloading JSON file
+* Where are snapshots stored on the server?
+* How do you use snapshot .zip files for later use?
 
 ***
 For information about trying the capabilities of R Server for free, check out [Microsoft R Client](https://msdn.microsoft.com/en-us/microsoft-r/r-client-get-started).
