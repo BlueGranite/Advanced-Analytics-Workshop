@@ -1,5 +1,3 @@
-
-
 # reference <https://msdn.microsoft.com/en-us/microsoft-r/scaler-spark-getting-started>
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,14 +36,50 @@ rxGetComputeContext()
 # ~~~~~~~~~~~
 
 # Example 1
-myHdfsFileSystem1 <- RxFileSystem(fileSystem = "hdfs")
-rxSetFileSystem(fileSystem = myHdfsFileSystem1 )
+myHdfsFileSystem <- RxFileSystem(fileSystem = "hdfs")
 
 # Example 2
-myHdfsFileSystem2 <- RxFileSystem(fileSystem = "hdfs", hostName = "myHost", port = 8020)
-rxSetFileSystem(fileSystem = myHdfsFileSystem2 )
+myHdfsFileSystem <- RxFileSystem(fileSystem = "hdfs", 
+                                 hostName = "myHost", 
+                                 port = 8020)
+
+rxSetFileSystem(fileSystem = myHdfsFileSystem)
 
 POC_data_root <- "/share" # HDFS location of the example data
 rxHadoopListFiles(POC_data_root)
 
-trainHive <- RxHiveData(query = "select * from sample_table")
+# from kbmMain erg_risk46 ~ erg_risk03 + age_gender + county_name
+trainHive <- RxHiveData(query = "select erg_risk46, erg_risk03, age_gender, county_name from sample_table")
+
+trainXdf <- RxXdfData(file = "/my_HDFS_data_path",
+                      fileSystem = myHdfsFileSystem1)
+rxImport(inData = trainHive, outFile = trainXdf) 
+
+# ~~~~~~~~~~~
+# train model
+# ~~~~~~~~~~~
+
+form <- erg_risk46 ~ erg_risk03 + age_gender + county_name
+
+trainData <- trainHive
+#trainData <- trainXdf
+
+runtime <- system.time(
+  mrsModel <- rxBTrees(
+    form,
+    data = trainData,
+    nTree = 10,
+    maxDepth = 5,
+    learningRate = 0.001,
+    minSplit = 10
+  )
+)
+
+# ~~~~~~~~~~
+## reference
+# ~~~~~~~~~~
+
+# myShareDir = paste("/var/RevoShare", Sys.info()[["user"]],
+#                    sep="/" )
+# myHdfsShareDir = paste("/user/RevoShare", Sys.info()[["user"]],
+#                        sep="/" )
