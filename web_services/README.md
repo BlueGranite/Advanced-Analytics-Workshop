@@ -41,6 +41,9 @@
 
 * Comparison of Base R and ScaleR Functions <https://msdn.microsoft.com/en-us/microsoft-r/scaler/compare-base-r-scaler-functions>
 
+* R Server on Spark Getting Started <https://msdn.microsoft.com/en-us/microsoft-r/scaler-spark-getting-started>
+
+
 ***
 
 ## Questions
