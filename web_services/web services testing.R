@@ -14,6 +14,19 @@
 library(mrsdeploy)
 library(tidyverse)
 
+##########################################################
+#            Log into Microsoft R Server                 #
+##########################################################
+
+# Use `remoteLogin` to authenticate with R Server using 
+# the local admin account. Use session = false so no 
+# remote R session started
+remoteLogin("http://localhost:12800", 
+            username = "admin", 
+            #password = "{{YOUR_PASSWORD}}",
+            password = "BlueGranite1!",
+            session = FALSE)
+
 # use the listServices() function from 'mrsdeploy' to return current web services info
 listServices() # all services
 listServices("housepricePredictService1482282060") # a specific service
@@ -46,18 +59,7 @@ manualTransmission <- function(hp, wt) {
 # test function locally by printing results
 print(manualTransmission(120, 2.8)) # 0.6418125
 
-##########################################################
-#            Log into Microsoft R Server                 #
-##########################################################
 
-# Use `remoteLogin` to authenticate with R Server using 
-# the local admin account. Use session = false so no 
-# remote R session started
-remoteLogin("http://localhost:12800", 
-            username = "admin", 
-            #password = "{{YOUR_PASSWORD}}",
-            password = "BlueGranite1!",
-            session = FALSE)
 
 ##########################################################
 #             Publish Model as a Service                 #

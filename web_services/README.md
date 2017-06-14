@@ -30,15 +30,24 @@
 ## Useful Links
 * mrsdeploy functions <https://msdn.microsoft.com/en-us/microsoft-r/mrsdeploy/mrsdeploy>
 
+* Details on remote execution <https://msdn.microsoft.com/en-us/microsoft-r/operationalize/remote-execution>
+
 * Workflow examples <https://msdn.microsoft.com/en-us/microsoft-r/operationalize/data-scientist-manage-services#workflow>
 
 * Package management with mrsdeploy <https://msdn.microsoft.com/en-us/microsoft-r/operationalize/package-management>
 
 * What's new in Microsoft R Server <https://msdn.microsoft.com/en-us/microsoft-r/rserver-whats-new>
 
+* Comparison of Base R and ScaleR Functions <https://msdn.microsoft.com/en-us/microsoft-r/scaler/compare-base-r-scaler-functions>
 
 ***
 
+## Questions
+
+* How to schedule web service execution
+* How to consume web service with GET call without downloading JSON file
+
+***
 For information about trying the capabilities of R Server for free, check out [Microsoft R Client](https://msdn.microsoft.com/en-us/microsoft-r/r-client-get-started).
  
 Visit [BlueGranite Hands-On Labs](https://www.blue-granite.com/resources/topic/labs) for many other advanced analytics tutorials.
