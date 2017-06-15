@@ -43,6 +43,10 @@
 
 * R Server on Spark Getting Started <https://msdn.microsoft.com/en-us/microsoft-r/scaler-spark-getting-started>
 
+* Evaluate load balancing capacity <https://msdn.microsoft.com/en-us/microsoft-r/operationalize/admin-evaluate-capacity#r-shell-pool>
+
+* Authentication options for R Server when operationalizing analytics <https://msdn.microsoft.com/en-us/microsoft-r/operationalize/security-authentication#local>
+
 
 ***
 
